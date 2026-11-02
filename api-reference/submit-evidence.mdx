@@ -5,4 +5,6 @@ description: "Read the POST /cases request and response contract generated from 
 openapi: "https://dwsoffshorepartners.com/.well-known/openapi.json POST /cases"
 ---
 
-This reference uses the live Ultiwrite OpenAPI contract. [Follow the quickstart](/quickstart) to obtain approved account access before calling the API.
+Submit an authorized evidence package to start or recover one saved case. Save the returned `caseId` immediately: a `202` response means processing is still pending. Preserve filenames, bytes and the forensic choice when retrying the same package.
+
+Use `POST` for a returned continuation; status reads alone do not advance work. [Choose the correct upload path](/partner-api/uploads), [follow the case workflow](/partner-api/workflow), and [check usage](/partner-api/usage) before submitting evidence.

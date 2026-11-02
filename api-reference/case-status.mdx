@@ -5,4 +5,6 @@ description: "Read the GET /cases/{caseId} request and response contract generat
 openapi: "https://dwsoffshorepartners.com/.well-known/openapi.json GET /cases/{caseId}"
 ---
 
-This reference uses the live Ultiwrite OpenAPI contract. [Follow the quickstart](/quickstart) to obtain approved account access before calling the API.
+Read the saved state of a case in the authorized account. This request does not advance processing. When the response provides a continuation, use its `POST` method for that same case on the canonical API origin.
+
+Stop on `failed` or `action_required`. A linked saved report, rather than successful HTTP transport, establishes that results are available. [Follow the case workflow](/partner-api/workflow) and [read the released results](/partner-api/results).
