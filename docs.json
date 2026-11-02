@@ -31,9 +31,22 @@
         ]
       },
       {
-        "group": "Reference",
+        "group": "API reference",
         "pages": [
-          "api-contract"
+          "api-contract",
+          "api-reference/account",
+          "api-reference/capabilities",
+          "api-reference/usage",
+          "api-reference/list-cases",
+          "api-reference/submit-evidence",
+          "api-reference/case-status",
+          "api-reference/continue-case",
+          "api-reference/case-findings",
+          "api-reference/case-brief",
+          "api-reference/report-findings",
+          "api-reference/report-brief",
+          "api-reference/report-delivery",
+          "api-reference/upload-link"
         ]
       }
     ],
@@ -86,5 +99,21 @@
   "description": "Integrate Ultiwrite investigative intelligence with approved API keys, OAuth and resumable evidence-to-report workflows.",
   "search": {
     "prompt": "Search Ultiwrite API docs"
+  },
+  "api": {
+    "openapi": "https://dwsoffshorepartners.com/.well-known/openapi.json",
+    "playground": {
+      "display": "simple",
+      "proxy": false
+    },
+    "examples": {
+      "languages": [
+        "bash",
+        "javascript",
+        "python"
+      ],
+      "prefill": false,
+      "autogenerate": true
+    }
   }
 }
