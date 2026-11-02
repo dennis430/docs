@@ -1,53 +1,72 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Ultiwrite Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#D39891",
+    "light": "#E7B7B0",
+    "dark": "#9A645E"
   },
-  "favicon": "/favicon.svg",
   "navigation": {
     "pages": [
       {
-        "group": "Getting Started",
+        "group": "Getting started",
         "pages": [
           "index",
-          "quickstart"
+          "quickstart",
+          "api-keys"
+        ]
+      },
+      {
+        "group": "Partner API",
+        "pages": [
+          "partner-api/overview",
+          "partner-api/authentication",
+          "partner-api/workflow",
+          "partner-api/uploads",
+          "partner-api/results",
+          "partner-api/usage",
+          "partner-api/errors-and-retries",
+          "partner-api/integration-checklist"
+        ]
+      },
+      {
+        "group": "Reference",
+        "pages": [
+          "api-contract"
         ]
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "API reference",
+          "icon": "code",
+          "href": "https://dwsoffshorepartners.com/docs/api"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Product documentation",
+          "icon": "book-open",
+          "href": "https://dwsoffshorepartners.com/docs"
         }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
     "links": [
       {
+        "href": "https://dwsoffshorepartners.com/docs/api",
+        "label": "API reference"
+      },
+      {
         "label": "Support",
-        "href": "mailto:support@mintlify.com"
+        "href": "https://dwsoffshorepartners.com/contact"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "href": "https://dwsoffshorepartners.com/dashboard"
     }
   },
   "contextual": {
@@ -63,10 +82,9 @@
     ]
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+  },
+  "description": "Integrate Ultiwrite investigative intelligence with approved API keys, OAuth and resumable evidence-to-report workflows.",
+  "search": {
+    "prompt": "Search Ultiwrite API docs"
   }
 }
