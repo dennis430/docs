@@ -46,7 +46,11 @@
           "api-reference/report-findings",
           "api-reference/report-brief",
           "api-reference/report-delivery",
-          "api-reference/upload-link"
+          "api-reference/upload-link",
+          "api-reference/list-webhooks",
+          "api-reference/create-webhook",
+          "api-reference/revoke-webhook",
+          "api-reference/webhook-deliveries"
         ]
       }
     ],

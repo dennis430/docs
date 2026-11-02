@@ -32,6 +32,10 @@ All paths below are relative to `/api/v1`.
 | GET | `/reports/{reportId}/brief` | Read the report's Decision Brief |
 | GET | `/reports/{reportId}/export` | Read entitled delivery options |
 | POST | `/upload-links` | Create a protected upload link |
+| GET | `/webhooks` | List configured destinations |
+| POST | `/webhooks` | Register a destination and obtain its secret once |
+| DELETE | `/webhooks/{endpointId}` | Revoke a destination and pending attempts |
+| GET | `/webhooks/{endpointId}/deliveries` | Read the latest fifty delivery outcomes |
 
 ## Authentication and account authority
 
@@ -53,6 +57,8 @@ Export returns entitled delivery options. Binary PDF, Excel and ZIP downloads re
 
 ## Integration boundaries
 
-The current contract does not offer client-credentials authentication, completion webhooks, append-evidence or rerun endpoints, selectable investigation tiers in requests, or unattended binary downloads. A report is advisory evidence for your workflow; it does not render an autonomous approve or decline.
+Optional workflow webhooks are available only where live OpenAPI includes their operations and GET /capabilities reports webhooks.available. Management requires an approved dashboard API key with read and evidence scopes; OAuth cannot manage destinations. Notifications do not advance continuation and contain minimal metadata. Read the [receiver signature, deduplication, retry and revocation contract](/partner-api/workflow#webhook-notifications).
+
+The current contract does not offer client-credentials authentication, append-evidence or rerun endpoints, selectable investigation tiers in requests, or unattended binary downloads. A report is advisory evidence for your workflow; it does not render an autonomous approve or decline.
 
 Use the [complete developer guide](https://dwsoffshorepartners.com/docs/downloads/partner-api/GUIDE.md), [downloadable README and Node examples](https://dwsoffshorepartners.com/docs/downloads/partner-api/README.md), and [integration checklist](/partner-api/integration-checklist) before sending customer evidence.
